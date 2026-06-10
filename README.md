@@ -73,6 +73,23 @@ npm run test         # testes unitários
 npm run test:e2e     # testes e2e
 ```
 
+## Frontend
+
+Painel admin em React + Tailwind + ShadCN na pasta `frontend/`.
+
+```bash
+# Terminal 1 — API
+npm run start:dev          # http://localhost:3000
+
+# Terminal 2 — UI
+cd frontend
+cp .env.example .env
+npm install
+npm run dev                # http://localhost:5173
+```
+
+Configure `VITE_API_URL` em `frontend/.env` se a API não estiver em `http://localhost:3000`.
+
 ## Estrutura
 
 ```
@@ -83,4 +100,11 @@ src/
 ├── inscricao/
 ├── app.module.ts
 └── main.ts
+
+frontend/
+├── src/
+│   ├── api/
+│   ├── pages/
+│   └── components/
+└── package.json
 ```
